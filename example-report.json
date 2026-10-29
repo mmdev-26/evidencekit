@@ -1,0 +1,65 @@
+{
+  "product": "EvidenceKit",
+  "version": "0.1.0",
+  "summary": {
+    "documents": 3,
+    "chunks": 3,
+    "evidence": 2,
+    "queryTermCoverage": 0.75
+  },
+  "evidence": [
+    {
+      "source": "operations-v1",
+      "sourceSha256": "b625cb6a34d94ab09bd80244ab6efd463e5b2e34d2443fd4ced9c0f9d06fb70f",
+      "start": 0,
+      "end": 248,
+      "text": "Invoice approval policy. Every invoice above EUR 500 requires manager approval before payment. Finance retains the approval record for seven years. This document describes the old operations policy. It is a synthetic test fixture, not legal advice.",
+      "score": 1.92262461,
+      "matchedTerms": [
+        "approval",
+        "invoice",
+        "policy"
+      ]
+    },
+    {
+      "source": "operations-v2",
+      "sourceSha256": "abe80eefcdae347c231453ef75e8726b47c94a7a70f2b65d6c09595c4b99c54f",
+      "start": 0,
+      "end": 271,
+      "text": "Updated invoice approval policy. Invoices above EUR 1000 require manager approval. Finance retains approval records for five years. This synthetic document intentionally differs from version one so reviewers must inspect the sources rather than accept a generated answer.",
+      "score": 1.55255235,
+      "matchedTerms": [
+        "approval",
+        "invoice",
+        "policy"
+      ]
+    }
+  ],
+  "unmatchedTerms": [
+    "retention"
+  ],
+  "sources": [
+    {
+      "id": "operations-v1",
+      "sha256": "b625cb6a34d94ab09bd80244ab6efd463e5b2e34d2443fd4ced9c0f9d06fb70f",
+      "characters": 248
+    },
+    {
+      "id": "operations-v2",
+      "sha256": "abe80eefcdae347c231453ef75e8726b47c94a7a70f2b65d6c09595c4b99c54f",
+      "characters": 271
+    },
+    {
+      "id": "engineering",
+      "sha256": "ca8a0848c28b95cb99e898797b79b1ef1642d3c7b7b9c3333b0b337010321e24",
+      "characters": 105
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Lexical BM25 retrieval, not semantic search or an LLM answer generator.",
+    "Scores and query-term coverage are not probabilities of truth.",
+    "Conflicting documents are returned as evidence; contradiction detection is not implemented.",
+    "Offsets use Unicode code points in the original text, not UTF-8 byte offsets."
+  ]
+}

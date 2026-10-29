@@ -1,0 +1,20 @@
+{
+  "query": "invoice approval retention policy",
+  "chunkWords": 40,
+  "overlapWords": 10,
+  "limit": 4,
+  "documents": [
+    {
+      "id": "operations-v1",
+      "text": "Invoice approval policy. Every invoice above EUR 500 requires manager approval before payment. Finance retains the approval record for seven years. This document describes the old operations policy. It is a synthetic test fixture, not legal advice."
+    },
+    {
+      "id": "operations-v2",
+      "text": "Updated invoice approval policy. Invoices above EUR 1000 require manager approval. Finance retains approval records for five years. This synthetic document intentionally differs from version one so reviewers must inspect the sources rather than accept a generated answer."
+    },
+    {
+      "id": "engineering",
+      "text": "Deployment procedures use two reviewers and a rollback plan. Service logs are retained for fourteen days."
+    }
+  ]
+}
